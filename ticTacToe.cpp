@@ -191,12 +191,17 @@ void DisplayBoard(char TTT_board[3][3], int &round, int &turn){
     (turn == 1)? std::cout <<"\n<<<- Computer ->>>\n":std::cout << "\n<<<- Player ->>>\n";
     std::cout << "Round  " << round << '\n';
 
-    for(int i=0; i<3; i++){
-        for(int j=0; j<3; j++){
-            std::cout << TTT_board[i][j] << "  ";
-        }
-        std::cout << '\n';
-    }
+    std::cout << '\n';
+    std::cout << "     |     |     \n";
+    std::cout << "  " << TTT_board[0][0] << "  |  " << TTT_board[0][1] << "  |  " << TTT_board[0][2] << "  \n";
+    std::cout << "_____|_____|_____\n";
+    std::cout << "     |     |     \n";
+    std::cout << "  " << TTT_board[1][0] << "  |  " << TTT_board[1][1] << "  |  " << TTT_board[1][2] << "  \n";
+    std::cout << "_____|_____|_____\n";
+    std::cout << "     |     |     \n";
+    std::cout << "  " << TTT_board[2][0] << "  |  " << TTT_board[2][1] << "  |  " << TTT_board[2][2] << "  \n";
+    std::cout << "     |     |     \n";
+    std::cout << '\n';
 }
 void checkWinner(char TTT_board[3][3],char symbol, char *recent_choice, int round, int turn){
     int row, col, search = 1;
